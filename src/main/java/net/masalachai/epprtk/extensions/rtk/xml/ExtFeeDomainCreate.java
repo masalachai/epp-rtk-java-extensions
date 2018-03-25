@@ -49,15 +49,6 @@ public class ExtFeeDomainCreate extends EPPXMLBase implements epp_Extension {
 		return cd_cmd_;
 	}
 
-	/**
-	 * Converts the AsiaCEDContact data into XML to be put into the extension
-	 * section of the request. Implemented method from
-	 * org.openrtk.idl.epprtk.epp_Unspec interface.
-	 *
-	 * @throws org.openrtk.idl.epprtk.epp_XMLException if required data is
-	 * missing
-	 * @see org.openrtk.idl.epprtk.epp_Extension
-	 */
 	public String toXML() throws epp_XMLException {
 		String method_name = "toXML()";
 		debug(DEBUG_LEVEL_THREE, method_name, "Entered");
@@ -104,18 +95,4 @@ public class ExtFeeDomainCreate extends EPPXMLBase implements epp_Extension {
 	public void fromXML(String xml) throws epp_XMLException {
 		
 	}
-
-	/*protected String getInnerXML(String xml) {
-		if (xml == null || xml.length() == 0) {
-			return xml;
-		}
-
-		int indexOfStart = xml.indexOf("<launch:");
-		xml = xml.substring(indexOfStart);
-		int indexOfEnd = xml.lastIndexOf("</launch:");
-		int realIndexOfEnd = xml.indexOf(">", indexOfEnd);
-		xml = xml.substring(0, realIndexOfEnd + 1);
-
-		return xml;
-	}*/
 }

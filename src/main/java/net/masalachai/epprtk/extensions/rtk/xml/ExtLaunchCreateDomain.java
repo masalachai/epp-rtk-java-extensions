@@ -60,15 +60,6 @@ public class ExtLaunchCreateDomain extends EPPXMLBase implements epp_Extension {
 		return cd_cmd_;
 	}
 
-	/**
-	 * Converts the AsiaCEDContact data into XML to be put into the extension
-	 * section of the request. Implemented method from
-	 * org.openrtk.idl.epprtk.epp_Unspec interface.
-	 *
-	 * @throws org.openrtk.idl.epprtk.epp_XMLException if required data is
-	 * missing
-	 * @see org.openrtk.idl.epprtk.epp_Extension
-	 */
 	public String toXML() throws epp_XMLException {
 		String method_name = "toXML()";
 		debug(DEBUG_LEVEL_THREE, method_name, "Entered");
